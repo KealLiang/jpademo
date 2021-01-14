@@ -24,7 +24,7 @@ public class MyOrder {
 
     //实体映射重复列必须设置：insertable = false,updatable = false
     @OneToOne
-    @JoinColumn(name = "cId", insertable = false, updatable = false)
+    @JoinColumn(name = "cId", insertable = false, updatable = false, foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
     private Customer customer;
 
     @Override
